@@ -123,7 +123,7 @@ async function createInstance(
         aliasIpRanges: [],
       },
     ],
-    //guestAccelerators: [
+    //guestAccelerators: [  #In case want to attach GPUs to the instance.
     //  {
     //    acceleratorCount: `${gpu_count}`,
     //    acceleratorType: `https://compute.googleapis.com/compute/v1/projects/${project_id}/zones/${zone}/acceleratorTypes/${gpu_type}`,
@@ -172,7 +172,7 @@ async function createInstance(
 }
 
 createInstance(
-  "trainmlproject-x", // proj id
+  "project-x", // proj id
   "us-central1", // region
   "us-central1-a", // zone
   "vm-test-worker-2", // vm name
