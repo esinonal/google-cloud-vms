@@ -10,4 +10,4 @@ The intended use of these scripts is that the data-vm populates the second disk 
 -Then, the datavm has served its purpose and the disk is filled with the data we need so the worker vm is started. (create-worker-vm). The second disk of the worker-vm is the disk that comes from the data-vm.
 -Then, the worker vm has the necessariy data in order to run the application.
 
-The credentials are set in order to access the account, which is done with a json credentials file. 
+The credentials are set in order to access the account, which is done with a json credentials file. The create-vm scripts use REST APIs.
