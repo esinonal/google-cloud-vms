@@ -1,8 +1,8 @@
 const Compute = require("@google-cloud/compute");
 const { vault_v1 } = require("googleapis");
 const compute = new Compute({
-  projectId: "trainmlproject-281219",
-  keyFilename: "/Users/esin/Downloads/trainmlproject-281219-426dbe893c23.json",
+  projectId: "trainmlproject-x",
+  keyFilename: "/Users/esin/Downloads/x.json",
 });
 
 async function createInstance(
@@ -34,7 +34,7 @@ async function createInstance(
         },
         {
           key: "CLIENT_ID",
-          value: "105d87c9-65fe-453b-ae15-b8b6663b207e",
+          value: "",
         },
         {
           key: "STAGE",
@@ -58,12 +58,12 @@ async function createInstance(
         {
           key: "CERTIFICATE_KEY",
           value:
-            "-----BEGIN CERTIFICATE-----\nMIIDWTCCAkGgAwIBAgIULKmNKU68XVf4TYd6bUdU4QsR1QcwDQYJKoZIhvcNAQEL\nBQAwTTFLMEkGA1UECwxCQW1hem9uIFdlYiBTZXJ2aWNlcyBPPUFtYXpvbi5jb20g\nSW5jLiBMPVNlYXR0bGUgU1Q9V2FzaGluZ3RvbiBDPVVTMB4XDTIwMDgxNjE5MjU1\nNFoXDTQ5MTIzMTIzNTk1OVowHjEcMBoGA1UEAwwTQVdTIElvVCBDZXJ0aWZpY2F0\nZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM1XejM3qfnQjoMAn5FJ\n8DvYkb1RPx5lg+QKok67A2U9t/lT9tzvrNgfaVcRqxMDzUhA4ZmHSOhLb3hFvBHC\n985zcvHV7jNyeKT1mJpl2kTcgigNSXip5mGmlcuWkWKFdO8ES/2WFnaHDrBGfTJM\nJ766viPbSdY+YBLpJkGd4m3Be/Wi/Ru3QTnJgUGiQxyolSszCH2wCq9Afwnu2ijE\nMpr3cT4mDzBvSfUDs3/3J31QBAdDMJd6DoQW4SNgjP7nAXdCWTf+Vv9RoSZV88EC\nV0lu5aznqbMilEvDTrwmcfNgCbsU+afzRKNVCyf8UqNr1DEtDfVrVXnr2ADxIvXC\nNekCAwEAAaNgMF4wHwYDVR0jBBgwFoAULqTA0DFCMGl4oCnTotTZANtyRg0wHQYD\nVR0OBBYEFIbbkePbb/1jVhsbyc/BqxFN4JK1MAwGA1UdEwEB/wQCMAAwDgYDVR0P\nAQH/BAQDAgeAMA0GCSqGSIb3DQEBCwUAA4IBAQBKPBv5xWBqYfhgTcy/LCqG4CGn\nn0iibOHlwiFCo6I/eeujxyxoGYU3TxfV8zDYuqJAyQdRtU2DwvKvfb1492FFHP4Q\njvEUW919pup10CdWHfhtYBeyaAiOOjYGwXyY8+qx+g7nSTEXGHtVojxCf7Fl1ITh\n6R6wFSCCERzYQ9e4NKzisvX0iq5AeJpull3TmVMoNBUPUUliLbgJ/ShjjdRvsx6n\nwCgRBhkiJe7u77Oe81YryARWoqr7+p6exBeJN7P+vGQy5vJk3AP6lIDZDjSLTrMd\nK5hqCqQ6S7alGa40DM11E6YThpMPXIXrYFd/JRusP07wKr2pjxE21YCxvB3j\n-----END CERTIFICATE-----",
+            "",
         },
         {
           key: "PRIVATE_KEY",
           value:
-            "-----BEGIN RSA PRIVATE KEY-----\nMIIEpgIBAAKCAQEAzVd6Mzep+dCOgwCfkUnwO9iRvVE/HmWD5AqiTrsDZT23+VP2\n3O+s2B9pVxGrEwPNSEDhmYdI6EtveEW8EcL3znNy8dXuM3J4pPWYmmXaRNyCKA1J\neKnmYaaVy5aRYoV07wRL/ZYWdocOsEZ9Mkwnvrq+I9tJ1j5gEukmQZ3ibcF79aL9\nG7dBOcmBQaJDHKiVKzMIfbAKr0B/Ce7aKMQymvdxPiYPMG9J9QOzf/cnfVAEB0Mw\nl3oOhBbhI2CM/ucBd0JZN/5W/1GhJlXzwQJXSW7lrOepsyKUS8NOvCZx82AJuxT5\np/NEo1ULJ/xSo2vUMS0N9WtVeevYAPEi9cI16QIDAQABAoIBAQDKZ+f0hHHv5TwU\ntZCUTiWXWCqQSn3FIJuZNUI4CO+X4/Zste8oaLgfcRcM1EWlQKIhDpNSGqArGfCO\nxW5Us7JAtlwfNZjO7Y8uS0hZKPy11AYYJMC/R/nnV6VgQNKeIp7Y24tsM32A6C/6\nYgEWiyrCPqEeBxIJNQLOoTMsisyfEc1FZ6/qBaDkk5fO6wcoUtInhyvYAdMeYy/0\nv67BkMdIgCS/4sDM3xzNKIEinocjT5LBpVDC+My0ac8lDJNc1xJKVuoKhZUSRG/Q\nt82cND1otKCWJk0kh1SiWekpOaDTjeeXgjSS1ViHUATPq2GiPHYnueyQGtqA5ih3\n8bu1GTVhAoGBAOwCcpFkK69L9V8HrAdGbFQUK06mFWHVf3S2fDZhB+2zz9vExEkX\nCUubeCZgUV76BVRsPAc1E5k4PC6GFbFSKdlNUt0YDzi1/TS41NgTmDEJpfLZGB30\n5ONtkewnK83+Pl5gd5pnogOE9TVVzW5O+Bl+N61KTcw5EFMGsvi3tsKrAoGBAN68\nCdFBFOUbv4qM4pXsQs6R9+SUsFT21Q0l1DUBd9HI+dDikuDz9TA7qPpsJdLncing\n3nIcA4v5j0tc68eiC5/ubLGJyojvainU219g8LCMf2SZAaepfVhxNFnqJ0UVD65w\ne4duLwijNPTsNdyCPQpaAAthQAzWNOp3NNyTPgm7AoGBAMSF1TjUHLw/l/alwM3e\nCl6I3PcEvVFWImfhfNUbPyrkS/VIh9oE4KygrQ/nrFpV/xIpfmLSA5vWg+aJqI6b\nSFW2WYXZfvNON6YrMrEqv9Q1oIXz2G05e08V8iifBY7mYrDbyzw7h2E+2aCr7gAo\nqdcwjtQxx06DReCc93K8J+c5AoGBALcKzP6cf3FxBk30TdlrWdOs/Y1p7CdG2ft+\nFRCibjeG9FYHfTFFC0BiJxH1gnf6IEXuOKCKCRglNO94I4Ph1a/PHqAgXsN+DT7n\nYIjXf7V3INIpM8T3cr0V+zHRTghlsIdohPvdPuXYShLlc7YNieBR6itv9lUWTFJL\nOLP0hU01AoGBAIyNctxvuFA2hns3I56dyHRKnhupCQmdxLsPM+3v9Utz8EOB1E8+\n0Mu4IhWR/Smkaj92kIRO7hIKUKRiBAMiv/NPl0wk7igHOUC6EhgTeC1tijs5ul+y\n6AxtWsahetqdO4V/ZOfhmZi8CnG73XUbEulP7VPhc7Rd3PDvkiaBfHfy\n-----END RSA PRIVATE KEY-----",
+            "",
         },
         {
           key: "INFLUX_USER",
@@ -83,19 +83,19 @@ async function createInstance(
         },
         {
           key: "DATA_CID",
-          value: "QmR4XrUVLhr6qBTsbfsqofvaGJyVmGyy1TEtAnxvtYCxar",
+          value: "",
         },
         {
           key: "DATA_UUID",
-          value: "8efe21a4-6b28-4c4b-8554-b3fa3576386b",
+          value: "",
         },
         {
           key: "JOB_CID",
-          value: "QmRbV9ACKfp1bWgrKiuYEBFHmnDK6y7rCX7DqGPiyEE9fQ",
+          value: "",
         },
         {
           key: "JOB_UUID",
-          value: "15d87c48-fb18-444b-9e63-6784dc483210",
+          value: "",
         },
       ],
     },
@@ -106,7 +106,7 @@ async function createInstance(
       {
         type: "PERSISTENT",
         initializeParams: {
-          sourceImage: `projects/${project_id}/global/images/${image_name_1}`, //image-of-my-trainml-vm
+          sourceImage: `projects/${project_id}/global/images/${image_name_1}`, 
         },
         boot: true,
         diskSizeGb: "10",
@@ -114,7 +114,7 @@ async function createInstance(
       {
         type: "PERSISTENT",
         initializeParams: {
-          sourceImage: `projects/${project_id}/global/images/${image_name_2}`, //image-of-my-trainml-vm
+          sourceImage: `projects/${project_id}/global/images/${image_name_2}`, 
         },
         boot: false,
         diskSizeGb: disk_storage,
@@ -140,7 +140,7 @@ async function createInstance(
         aliasIpRanges: [],
       },
     ],
-    //guestAccelerators: [
+    //guestAccelerators: [    #In case want to attach GPUs to the instance.
     //  {
     //    acceleratorCount: `${gpu_count}`,
     //    acceleratorType: `https://compute.googleapis.com/compute/v1/projects/${project_id}/zones/${zone}/acceleratorTypes/${gpu_type}`,
@@ -189,7 +189,7 @@ async function createInstance(
 }
 
 createInstance(
-  "trainmlproject-281219", // proj id
+  "project-x", // proj id
   "us-central1", // region
   "us-central1-a", // zone
   "vm-data20", // vm name
